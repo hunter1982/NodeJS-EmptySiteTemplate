@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'centosSlave'
+    }
+
+  }
   stages {
     stage('Checkout code') {
       parallel {
