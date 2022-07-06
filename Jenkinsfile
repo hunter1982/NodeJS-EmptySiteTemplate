@@ -31,7 +31,7 @@ pipeline {
 
     stage('Test App') {
       steps {
-        sh 'node '
+        sh 'node server.js &'
       }
     }
 
