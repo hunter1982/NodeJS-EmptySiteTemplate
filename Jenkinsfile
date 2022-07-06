@@ -10,6 +10,7 @@ pipeline {
       parallel {
         stage('Checkout code') {
           steps {
+            sh 'rm -rf .'
             git(url: 'https://github.com/hunter1982/NodeJS-EmptySiteTemplate.git', branch: 'master', credentialsId: 'github')
           }
         }
